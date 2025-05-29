@@ -1,3 +1,6 @@
+FFmpeg is a free and open-source software project consisting of a suite of libraries and programs for handling video, audio, and other multimedia files and streams. At its core is the command-line ffmpeg tool itself, designed for processing video and audio files.
+
+
 ##When to Use Each Method
 
 Knowing when to use each process management method is critical for efficient process management in Node.js. Here are some general guidelines:
