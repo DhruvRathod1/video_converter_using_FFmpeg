@@ -5,20 +5,18 @@ const ffmpeg = require('fluent-ffmpeg');
 ffmpeg.setFfmpegPath(ffmpegStatic);
 
 const inputPath = './assets/input.mp4';
-const outputPath = 'output1.avi';
-const videoCodec = 'libx264';
+const outputPath = 'FunctionOutput.avi';
 
 const start = Date.now();
 
 ffmpeg()
     .input(inputPath)
-    .videoCodec(videoCodec)
     .format('avi')
     .output(outputPath)
     .on('end', () => {
-        console.log('Complete.');
+        //console.log('Complete.');
         const end = Date.now();
-        console.log(`Execution time: ${end - start} ms`);
+        console.log(`Execution time for Normal Function: ${end - start} ms`);
     })
     .on('error', (err) => {
         console.error('Error:', err.message);

@@ -18,7 +18,7 @@ process.on('message', (message) => {
             console.log('done');
 
             const end = Date.now();
-            console.log(`Execution time: ${end - start} ms`);
+            console.log(`Execution time for Spawn() method: ${end - start} ms`);
             process.send({ type: 'close', code });
         });
     }

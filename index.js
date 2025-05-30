@@ -9,7 +9,7 @@ const { fork } = require('child_process');
 const child = fork('./childprocess.js');
 
 // const ffmpegArgs = ['-i', './assets/input.mp4', "crop=1080:1080:420:0", 'output2.mp4'];
-const ffmpegArgs = ['-i', './assets/input.mp4', 'output2.avi'];
+const ffmpegArgs = ['-i', './assets/input.mp4', 'ForkOutput.avi'];
 
 child.send({ type: 'ffmpeg', args: ffmpegArgs });
 

@@ -1,9 +1,9 @@
 const { exec } = require('child_process');
 
-const ffmpegCommand = `ffmpeg -i assets/input.mp4 -vcodec libx264 -acodec aac output.avi`;
+const ffmpegCommand = `ffmpeg -i assets/input.mp4 exeOutput.avi`;
 
 const start = Date.now();
-console.log("Childprocess started");
+//console.log("Childprocess started");
 
 exec(ffmpegCommand, (error, stdout, stderr) => {
     if (error) {
@@ -11,6 +11,6 @@ exec(ffmpegCommand, (error, stdout, stderr) => {
         return;
     }
     const end = Date.now();
-    console.log(`Execution time childprocess: ${end - start} ms`);
+    console.log(`Execution time for exec() method: ${end - start}`);
 
 });
