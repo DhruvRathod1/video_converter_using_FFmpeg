@@ -8,6 +8,8 @@ app.get('/non-blocking', (req, res) => {
     res.send("Hello User");
 })
 
+//creating workers 
+
 function createWorker() {
     return new Promise((resolve, reject) => {
         const worker = new Worker("./four-worker.js", {
@@ -16,12 +18,10 @@ function createWorker() {
 
         worker.on("message", (data) => {
             resolve(data);
-
         });
 
         worker.on("error", (error) => {
             reject(error);
-
         });
     })
 }
